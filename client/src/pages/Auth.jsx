@@ -32,7 +32,7 @@ function Auth({isModel = false}) {
   return (
     <div className={`
       w-full 
-      ${isModel ? "py-4" : "min-h-screen bg-[#f3f3f3] flex items-center justify-center px-6 py-20"}
+      ${isModel ? "py-4" : "min-h-screen bg-white flex items-center justify-center px-6 py-20"}
     `}>
         <motion.div 
         initial={{opacity:0 , y:-40}} 
@@ -41,10 +41,10 @@ function Auth({isModel = false}) {
         className={`
         w-full 
         ${isModel ? "max-w-md p-8 rounded-3xl" : "max-w-lg p-12 rounded-4xl"}
-        bg-white shadow-2xl border border-gray-200
+        bg-white shadow-sm border border-gray-200
       `}>
             <div className='flex items-center justify-center gap-3 mb-6'>
-                <div className='bg-black text-white p-2 rounded-lg'>
+                <div className='bg-gradient-to-r from-[#6600CC] to-[#7A33D1] text-white p-2 rounded-lg'>
                     <BsRobot size={18}/>
 
                 </div>
@@ -53,14 +53,14 @@ function Auth({isModel = false}) {
 
             <h1 className='text-2xl md:text-3xl font-semibold text-center leading-snug mb-4'>
                 Continue to
-                <span className='bg-green-100 text-green-600 px-3 py-1 rounded-full inline-flex items-center gap-2'>
+                <span className='bg-white text-[#6600CC] border border-gray-200 px-3 py-1 rounded-full inline-flex items-center gap-2'>
                     <IoSparkles size={16}/>
                     AI Mock Interviews
 
                 </span>
             </h1>
 
-            <p className='text-gray-500 text-center text-sm md:text-base leading-relaxed mb-8'>
+            <p className='text-gray-600 text-center text-sm md:text-base leading-relaxed mb-8'>
                 Sign in to start role-based AI interviews,
         track your progress, and get detailed feedback reports.
             </p>
@@ -70,7 +70,7 @@ function Auth({isModel = false}) {
             onClick={handleGoogleAuth}
             whileHover={{opacity:0.9 , scale:1.03}}
             whileTap={{opacity:1 , scale:0.98}}
-            className='w-full flex items-center justify-center gap-3 py-3 bg-black text-white rounded-full shadow-md '>
+            className='w-full flex items-center justify-center gap-3 py-3 bg-gradient-to-r from-[#6600CC] to-[#7A33D1] hover:from-[#5B00B3] hover:to-[#7A33D1] text-white rounded-full shadow-sm transition active:scale-95'>
                 <FcGoogle size={20}/>
                 Continue with Google
 

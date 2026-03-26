@@ -75,17 +75,17 @@ function Step1SetUp({ onStart }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 px-4'>
+            className='min-h-screen flex items-center justify-center bg-white px-4'>
 
-            <div className='w-full max-w-6xl bg-white rounded-3xl shadow-2xl grid md:grid-cols-2 overflow-hidden'>
+            <div className='w-full max-w-6xl bg-white rounded-3xl shadow-sm grid md:grid-cols-2 overflow-hidden border border-gray-200'>
 
                 <motion.div
                     initial={{ x: -80, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.7 }}
-                    className='relative bg-gradient-to-br from-green-50 to-green-100 p-12 flex flex-col justify-center'>
+                    className='relative bg-[#F3E8FF] p-12 flex flex-col justify-center'>
 
-                    <h2 className="text-4xl font-bold text-gray-800 mb-6">
+                    <h2 className="text-4xl font-bold text-black mb-6">
                         Start Your Mock Interview
                     </h2>
 
@@ -99,15 +99,15 @@ function Step1SetUp({ onStart }) {
                         {
                             [
                                 {
-                                    icon: <FaUserTie className="text-green-600 text-xl" />,
+                                    icon: <FaUserTie className="text-[#6600CC] text-xl" />,
                                     text: "Choose Your Role & Experience",
                                 },
                                 {
-                                    icon: <FaMicrophoneAlt className="text-green-600 text-xl" />,
+                                    icon: <FaMicrophoneAlt className="text-[#6600CC] text-xl" />,
                                     text: "AI-Led Voice Interview",
                                 },
                                 {
-                                    icon: <FaChartLine className="text-green-600 text-xl" />,
+                                    icon: <FaChartLine className="text-[#6600CC] text-xl" />,
                                     text: "Detailed Performance Insights",
                                 },
                             ].map((item, index) => (
@@ -118,7 +118,7 @@ function Step1SetUp({ onStart }) {
                                     whileHover={{ scale: 1.03 }}
                                     className='flex items-center space-x-4 bg-white p-4 rounded-xl shadow-sm cursor-pointer'>
                                     {item.icon}
-                                    <span className='text-gray-700 font-medium'>{item.text}</span>
+                                    <span className='text-gray-600 font-medium'>{item.text}</span>
 
                                 </motion.div>
                             ))
@@ -137,7 +137,7 @@ function Step1SetUp({ onStart }) {
                     transition={{ duration: 0.7 }}
                     className="p-12 bg-white">
 
-                    <h2 className='text-3xl font-bold text-gray-800 mb-8'>
+                    <h2 className='text-3xl font-bold text-black mb-8'>
                         Interview Setup
                     </h2>
 
@@ -145,19 +145,19 @@ function Step1SetUp({ onStart }) {
                     <div className='space-y-6'>
 
                         <div className='relative'>
-                            <FaUserTie className='absolute top-4 left-4 text-gray-400' />
+                            <FaUserTie className='absolute top-4 left-4 text-gray-600' />
 
                             <input type='text' placeholder='Enter job role (e.g., Frontend Developer)'
-                                className='w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition'
+                                className='w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#6600CC] focus:border-[#6600CC] outline-none transition bg-white'
                                 onChange={(e) => setRole(e.target.value)} value={role} />
                         </div>
 
 
                         <div className='relative'>
-                            <FaBriefcase className='absolute top-4 left-4 text-gray-400' />
+                            <FaBriefcase className='absolute top-4 left-4 text-gray-600' />
 
                             <input type='text' placeholder='Enter experience (e.g., 2 years)'
-                                className='w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition'
+                                className='w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#6600CC] focus:border-[#6600CC] outline-none transition bg-white'
                                 onChange={(e) => setExperience(e.target.value)} value={experience} />
 
 
@@ -166,7 +166,7 @@ function Step1SetUp({ onStart }) {
 
                         <select value={mode}
                             onChange={(e) => setMode(e.target.value)}
-                            className='w-full py-3 px-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition'>
+                            className='w-full py-3 px-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#6600CC] focus:border-[#6600CC] outline-none transition bg-white'>
 
                             <option value="Technical">Technical Interview Mode</option>
                             <option value="HR">HR Interview Mode</option>
@@ -177,9 +177,9 @@ function Step1SetUp({ onStart }) {
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 onClick={() => document.getElementById("resumeUpload").click()}
-                                className='border-2 border-dashed border-gray-300 rounded-xl p-8 text-center cursor-pointer hover:border-green-500 hover:bg-green-50 transition'>
+                                className='border-2 border-dashed border-gray-300 rounded-xl p-8 text-center cursor-pointer hover:border-[#5B00B3] hover:bg-[#F3E8FF] transition'>
 
-                                <FaFileUpload className='text-4xl mx-auto text-green-600 mb-3' />
+                                <FaFileUpload className='text-4xl mx-auto text-[#6600CC] mb-3' />
 
                                 <input type="file"
                                     accept="application/pdf"
@@ -199,7 +199,7 @@ function Step1SetUp({ onStart }) {
                                             handleUploadResume()
                                         }}
 
-                                        className='mt-4 bg-gray-900 text-white px-5 py-2 rounded-lg hover:bg-gray-800 transition'>
+                                        className='mt-4 bg-gradient-to-r from-[#6600CC] to-[#7A33D1] text-white px-5 py-2 rounded-lg hover:bg-[#5B00B3] hover:from-[#5B00B3] hover:to-[#7A33D1] transition active:scale-95'>
                                         {analyzing ? "Analyzing Resume..." : "Analyze Resume"}
 
 
@@ -215,13 +215,13 @@ function Step1SetUp({ onStart }) {
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className='bg-gray-50 border border-gray-200 rounded-xl p-5 space-y-4'>
-                                <h3 className='text-lg font-semibold text-gray-800'>
+                                className='bg-[#FAFAFA] border border-gray-200 rounded-xl p-5 space-y-4'>
+                                <h3 className='text-lg font-semibold text-black'>
                                     Resume Analysis Summary</h3>
 
                                 {projects.length > 0 && (
                                     <div>
-                                        <p className='font-medium text-gray-700 mb-1'>
+                                        <p className='font-medium text-gray-600 mb-1'>
                                             Projects Found:</p>
 
                                         <ul className='list-disc list-inside text-gray-600 space-y-1'>
@@ -234,12 +234,12 @@ function Step1SetUp({ onStart }) {
 
                                 {skills.length > 0 && (
                                     <div>
-                                        <p className='font-medium text-gray-700 mb-1'>
+                                        <p className='font-medium text-gray-600 mb-1'>
                                             Skills Found:</p>
 
                                         <div className='flex flex-wrap gap-2'>
                                             {skills.map((s, i) => (
-                                                <span key={i} className='bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm'>{s}</span>
+                                                <span key={i} className='bg-[#F3E8FF] text-[#6600CC] border border-gray-200 px-3 py-1 rounded-full text-sm'>{s}</span>
                                             ))}
                                         </div>
                                     </div>
@@ -254,7 +254,7 @@ function Step1SetUp({ onStart }) {
                             disabled={!role || !experience || loading}
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.95 }}
-                            className='w-full disabled:bg-gray-600 bg-green-600 hover:bg-green-700 text-white py-3 rounded-full text-lg font-semibold transition duration-300 shadow-md'>
+                            className='w-full disabled:opacity-60 disabled:bg-[#E5E7EB] disabled:text-gray-600 bg-gradient-to-r from-[#6600CC] to-[#7A33D1] hover:from-[#5B00B3] hover:to-[#7A33D1] text-white py-3 rounded-full text-lg font-semibold transition duration-300 shadow-sm hover:shadow-md active:scale-95'>
                             {loading ? "Starting...":"Start Your Interview"}
 
 

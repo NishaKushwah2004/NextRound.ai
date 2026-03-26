@@ -27,7 +27,7 @@ const AudioVisualizer = ({ isListening }) => {
         ctx.beginPath();
         ctx.moveTo(0, canvas.height / 2);
         ctx.lineTo(canvas.width, canvas.height / 2);
-        ctx.strokeStyle = '#d1d5db'; // gray-300
+        ctx.strokeStyle = '#E5E7EB'; // border-gray-200
         ctx.lineWidth = 2;
         ctx.stroke();
       }
@@ -74,7 +74,7 @@ const AudioVisualizer = ({ isListening }) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       ctx.lineWidth = 2;
-      ctx.strokeStyle = '#10b981'; // emerald-500
+      ctx.strokeStyle = '#6600CC'; // primary purple
       ctx.beginPath();
       
       const sliceWidth = canvas.width * 1.0 / dataArrayRef.current.length;
