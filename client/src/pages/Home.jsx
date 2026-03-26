@@ -36,7 +36,7 @@ function Home() {
         <div className='max-w-6xl mx-auto'>
 
           <div className='flex justify-center mb-6'>
-            <div className='bg-white text-gray-600 text-sm px-4 py-2 rounded-full flex items-center gap-2 border border-gray-200'>
+            <div className='bg-white text-gray-600 text-sm px-4 py-2 rounded-full flex items-center gap-2 border-outline '>
               <HiSparkles size={16} className="bg-[#F3E8FF] text-[#6600CC]" />
               AI-Powered Mock Interview Platform
             </div>
@@ -83,7 +83,7 @@ function Home() {
                 }}
                 whileHover={{ opacity: 0.9, scale: 1.03 }}
                 whileTap={{ opacity: 1, scale: 0.98 }}
-                className='bg-gradient-to-r from-[#6600CC] to-[#7A33D1] text-white px-10 py-3 rounded-full hover:from-[#5B00B3] hover:to-[#7A33D1] transition shadow-sm active:scale-95'>
+                className='bg-linear-to-r from-[#6600CC] to-[#7A33D1] text-white px-10 py-3 rounded-full hover:from-[#5B00B3] hover:to-[#7A33D1] transition shadow-sm active:scale-95'>
                 Start Your Interview
 
               </motion.button>
